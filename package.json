@@ -4,7 +4,8 @@
   "description": "Common UI for King PCT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve"
   },
   "author": "",
   "license": "ISC",
@@ -17,15 +18,20 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-runtime": "^6.2.0",
     "browser-sync": "^2.10.0",
+    "connect-modrewrite": "^0.8.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-changed": "^1.3.0",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^3.0.1",
+    "gulp-inject": "^3.0.0",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "http-proxy": "^1.12.0",
     "jspm": "^0.16.15",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5"
   },
   "jspm": {
     "dependencies": {
