@@ -12,7 +12,7 @@ import autoprefixer from 'gulp-autoprefixer';
 import path from '../paths';
 
 gulp.task('sass', () => {
-	return gulp.src(path.styles)
+	return gulp.src(path.app.styles)
 		.pipe(changed(path.tmp.styles), {extension: '.scss'})
 		.pipe(sourcemaps.init())
 		.pipe(sass({style: 'compressed'}))

@@ -96,63 +96,20 @@ function startBrowserSync(baseDir, files, browser) {
 //=============================================
 
 /**
- * The 'config' task is to configure environment by injecting
- * global env variable into the `index.html`.
- *
- * @return {Stream}
- */
-gulp.task('config', () => {
-    const mock = !!argv.mock ? argv.mock === 'true' : ENV === 'test' || OPTIMIZE === 'true';
-    const env = ENV === TEST_OPTIMIZE ? 'test' : ENV;
-    return gulp.src(path.app.config.conditions)
-        .pipe(inject(gulp.src('.'), {
-            starttag: '/* inject:env */',
-            endtag: '/* endinject */',
-            transform: () => `export var mock = ${mock};\nexport var optimize = ${OPTIMIZE === 'true' || ENV=== 'prod'};\nexport var environment = '${env}';`
-        }))
-        .pipe(gulp.dest(path.app.config.basePath));
-});
-
-/**
  * The 'startBrowserSync' task start BrowserSync and open the browser.
  */
 gulp.task('startBrowserSync', () => {
-    let startBrowserSyncTask;
-
-    switch(ENV) {
-        case 'dev':
-        case 'test':
-            startBrowserSyncTask = startBrowserSync(['.tmp', 'src', 'jspm_packages', './' ]);
-            break;
-        case 'prod':
-        case TEST_OPTIMIZE:
-            startBrowserSyncTask = startBrowserSync([path.build.dist.basePath]);
-            break;
-    }
-
-    return startBrowserSyncTask;
+    return startBrowserSync(['.tmp', 'src', 'jspm_packages', './' ]);
 });
 
 /**
  * The 'serve' task serve the dev, test and prod environment.
  */
 gulp.task('serve', () => {
-    let serveTasks;
-
-    switch(ENV) {
-        case 'dev':
-        case 'test':
-            serveTasks = ['config', 'sass', 'watch'];
-            break;
-        case 'prod':
-        case TEST_OPTIMIZE:
-            serveTasks = ['config', 'build'];
-            break;
-    }
 
     // this will first run all serveTasks and then startBrowserSync task
     runSequence(
-        serveTasks,
+        ['sass', 'watch'],
         ['startBrowserSync']
     );
 });
