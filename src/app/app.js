@@ -1,10 +1,12 @@
 'use strict';
 
 import angular from 'angular';
-import moduleName from './app';
+
+import './components/components';
+import app from './ng-decorators';
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, [moduleName], {
+    angular.bootstrap(document, [app.name], {
     	strictDi: true
     });
 });
