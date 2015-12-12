@@ -8,7 +8,7 @@ const paths = {
 	syles: `${root}/styles/`,
 	gulpfile: [`${root}/gulpfile.js`, `${root}/gulp/**/*.js`],
 	app: {
-		styles: `${root}/src/styles/**/*.scss`,
+		styles: `${root}/src/**/*.scss`,
 		images: `${root}/src/images/**/*.{png,gif,jpg,jpeg}`,
 		scripts: [`${root}/src/app/**/*.js`],
 		fonts: [`${root}/src/fonts/**/*.{eot,svg,ttf,woff,woff2}`, `${root}/jspm_packages/**/*.{eot,svg,ttf,woff,woff2}`],

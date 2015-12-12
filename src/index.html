@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- build:remove -->
         <base href="/">
-        <!-- endbuild -->
-        <!-- inject:baseUrl --><!-- endinject -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Angular Example Application</title>
@@ -12,22 +9,14 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="styles/main.css" />
-        <!-- endbuild -->
     </head>
     <body>
 
-        <todo></todo>
-
-        <!-- build:js(.) scripts/main.min.js -->
-        <!-- inject:build:js --><!-- endinject -->
-        <!-- endbuild -->
-
-        <!-- build:remove -->
+        <todo-list></todo-list>
         <script src="jspm_packages/system.js"></script>
         <script src="config.js"></script>
         <script>
             System.import('app/app').catch(console.error.bind(console)); // make sure any errors are print to console
         </script>
-        <!-- endbuild -->
     </body>
 </html>

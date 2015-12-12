@@ -1,3 +1,3 @@
 'use strict';
 
-import './todo/todo';
+import './todo-list/todo-list';

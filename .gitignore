@@ -2,3 +2,5 @@ node_modules
 jspm_packages
 .tmp
 .DS_Store
+.idea
+npm-debug.log
