@@ -1,9 +1,10 @@
 'use strict';
 
 import angular from 'angular';
+import {UpgradeAdapter} from 'angular2/upgrade';
 
-
-const app = angular.module('TodoApp', [])
+export const app = angular.module('TodoApp', []);
+export const adapter = new UpgradeAdapter();
 
 function Component(component) {
     return function decorator(target) {
@@ -67,5 +68,4 @@ function dashCaseToCamelCase(string) {
     });
 }
 
-export default app;
 export {Component, View, Directive};

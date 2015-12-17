@@ -1,42 +1,4 @@
 @mixin todo-list() {
-  .todo-list-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .todo-list {
-    width: 50%;
-    background-color: $color-blue-darker-1;
-    border-radius: $border-radius;
-    padding: 20px;
-  }
-
-  .todo-list-item {
-    background-color: $color-white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $color-grey-lighter-1;
-    }
-
-    &:not(:last-of-type) {
-      margin-bottom: 10px;
-    }
-
-    .item-date {
-      color: $color-grey;
-      flex: 1;
-    }
-    .item-message {
-      flex: 7;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  }
 }
 
 @include todo-list;

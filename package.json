@@ -42,6 +42,8 @@
     },
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.8",
+      "angular2": "npm:angular2@^2.0.0-beta.0",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.2",
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {

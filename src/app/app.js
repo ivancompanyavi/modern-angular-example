@@ -1,12 +1,12 @@
 'use strict';
 
 import angular from 'angular';
+import 'reflect-metadata';
 
 import './components/components';
-import app from './ng-decorators';
+import {app, adapter} from './ng-decorators';
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, [app.name], {
-    	strictDi: true
-    });
+
+    adapter.bootstrap(document.body, [app.name]);
 });

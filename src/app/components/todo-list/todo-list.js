@@ -13,8 +13,8 @@ class TodoList {
     constructor() {
         this.todoList = [
             {message: "This is a meesage", date: new Date()},
-            {message: "Comprar la cena para nochevieja", date: new Date()},
+            {message: "Buy some food for Christmas", date: new Date()},
             {message: "long text long text long text long text long text long text long text long text long text long text long text long text long text long text ", date: new Date()}
-        ]
+        ];
     }
 }

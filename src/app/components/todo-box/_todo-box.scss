@@ -1,0 +1,12 @@
+@mixin todo-box() {
+  .todo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: $color-blue-darker-1;
+    border-radius: $border-radius;
+  }
+}
+
+@include todo-box();

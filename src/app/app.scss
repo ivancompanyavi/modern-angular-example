@@ -1,4 +1,19 @@
 @import 'styles/colors';
 @import 'styles/util';
 @import 'styles/sizes';
+@import 'components/todo-box/todo-box';
 @import 'components/todo-list/todo-list';
+@import 'components/todo-element/todo-element';
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+}

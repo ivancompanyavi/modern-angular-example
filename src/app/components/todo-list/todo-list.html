@@ -1,13 +1,4 @@
-<h1 class="text-center">TODO list</h1>
-<div class="todo-list-wrapper">
-    <div class="todo-list">
-        <div class="todo-list-item" ng-repeat="todoItem in vm.todoList">
-            <div class="item-message">
-                {{todoItem.message}}
-            </div>
-            <div class="item-date">
-                {{todoItem.date | date}}
-            </div>
-        </div>
-    </div>
+<div class="todo-list">
+    <todo-element ng-repeat="todoItem in vm.todoList" [item]="todoItem" />
+    <new-todo></new-todo>
 </div>
